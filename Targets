@@ -1,0 +1,38 @@
+*** Targets ***
+
+probe = FPing
+
+menu = Top
+title = Network Latency Grapher
+remark = Welcome to the SmokePing website of xxx Company. \
+         Here you will learn all about the latency of our network.
+
++ Local
+
+menu = Local
+title = Local Network
+#parents = owner:/Test/James location:/
+
+++ LocalMachine
+
+menu = Local Machine
+title = This host
+host = localhost
+#alerts = someloss
+
++++ download_from_SpeedTest
+menu = download_from_SpeedTest
+title = download_from_SpeedTest
+probe = speedtest-download
+server = 1737
+measurement = download
+host = dummy.com
+
++++ upload_to_SpeedTest
+menu = upload_to_SpeedTest
+title = upload_to_SpeedTest
+probe = speedtest-upload
+server = 1737
+measurement = upload
+host = dummy.com
+
